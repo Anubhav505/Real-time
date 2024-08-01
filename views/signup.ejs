@@ -1,0 +1,44 @@
+<%= layout("layouts/boilerplate.ejs") %>
+<div class="clr">
+  <div class="lr">
+    <h1>Signup</h1>
+    <form action="/signup" method="POST">
+      <div class="lr-details">
+        <input type="text" name="username" placeholder="Username" required />
+      </div>
+      <div class="lr-details">
+        <input
+          class="lr-details"
+          type="password"
+          name="password"
+          placeholder="Password"
+          required
+        />
+      </div>
+      <button
+        style="
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          margin-top: 5px;
+          background-color: rgba(0, 0, 0, 0.5);
+          height: 25px;
+          border-radius: 20px;
+          color: white;
+        "
+        class="btn"
+        type="submit"
+      >
+        Sign Up
+      </button>
+    </form>
+    <!-- <% if (typeof error !== 'undefined') { %>
+    <div style="color: red"><%= error %></div>
+    <% } %> -->
+    <% if (flashMessages.error) { %>
+    <div style="color: red"><%= flashMessages.error %></div>
+    <% } %>
+    <br><p>already an account? <a href="/login">Login</a></p>
+  </div>
+</div>

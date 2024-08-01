@@ -1,0 +1,17 @@
+.navbar-nav {
+  margin-left: 100px;
+}
+.navbar {
+  background-color: #678381;
+  z-index: 100000000000000000000000000000000;
+}
+
+.navbar-brand {
+  color: rgb(11, 31, 42);
+  width: 30vh;
+}
+
+.nav-link {
+  font-weight: bold;
+  color: rgba(11, 31, 42, 0.5);
+}

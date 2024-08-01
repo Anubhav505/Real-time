@@ -1,0 +1,43 @@
+
+<nav class="navbar sticky-top navbar-expand-lg">
+  <div class="container-fluid">
+    <div class="navbar-nav-a">
+      <a class="navbar-brand" href="/">
+        <span class="navbar-brand-name"><b>FIGHT CLUB</b></span>
+      </a>
+      <span id="playPause"><i class="fa-solid fa-play"></i></span>
+    </div>
+
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <audio id="myAudio">
+      <source src="/music/wmm.mp3" type="audio/mpeg" />
+    </audio>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/home">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/chat">CHAT</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">LOG OUT</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/music.js"></script>

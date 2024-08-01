@@ -1,0 +1,75 @@
+.chat-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.chat-box {
+  overflow-y: auto;
+  margin: 10px;
+  padding: 10px;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.4) rgba(255, 255, 255, 0.5); /* For Firefox */
+}
+.message-header {
+  color: white;
+}
+.username {
+  font-weight: bold;
+}
+.message {
+  list-style: none;
+  margin-bottom: 10px;
+}
+.message-body {
+  background-color: rgba(55, 151, 240, 0.5);
+  max-width: 90%;
+  padding: 5px 15px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  border-top-left-radius: 0;
+  word-wrap: break-word; /* Ensures words are broken to fit within the container */
+  overflow-wrap: break-word; /* Ensures text is broken to fit within the container */
+  display: inline-block; /* Ensures the container can grow vertically */
+}
+
+.message-body p {
+  margin: 0;
+  color: white;
+}
+.message-form {
+  width: 100%;
+  margin: 0 0 5px 0;
+  display: flex;
+}
+#message-input {
+  width: 80%;
+  border-radius: 15px;
+  border: none;
+  padding: 0 10px;
+}
+.message-form button {
+  width: 20%;
+  border: none;
+  border-radius: 15px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.message-form button:hover {
+  background: #0056b3;
+}
+@media (max-width: 600px) {
+  .chat-container {
+    width: 100%;
+    max-height: 93vh;
+  }
+  .chat-box {
+    max-width: 100vh;
+  }
+}

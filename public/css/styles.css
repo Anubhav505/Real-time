@@ -1,0 +1,56 @@
+*{
+  font-family: 'Gruppo', sans-serif;
+  font-weight: bold;
+}
+body {
+  background-image: url(/img/fc.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+@media (max-width: 600px) {
+  body {
+    background-image: url("/img/fcm.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}
+
+/* HOME */
+
+.home {
+  font-size: clamp(
+    2rem,
+    5vw,
+    90px
+  ); /* Adjust the font size based on the viewport width */
+  font-weight: bold;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .home {
+    font-size: 50px;
+    top: 250px;
+  }
+}
+
+.content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
