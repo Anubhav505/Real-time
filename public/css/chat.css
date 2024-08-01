@@ -1,75 +1,109 @@
 .chat-container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  max-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 500px; /* Set a max-width for better scaling */
+    margin: 0 auto;
+    background-color: #101010;
+    border-radius: 8px;
+    position: relative; /* Make the container relative for the absolute positioning of the form */
 }
+
 .chat-box {
-  overflow-y: auto;
-  margin: 10px;
-  padding: 10px;
-  scrollbar-width: thin;
-  scrollbar-color: rgba(0, 0, 0, 0.4) rgba(255, 255, 255, 0.5); /* For Firefox */
+    flex: 1;
+    overflow-y: auto;
+    margin: 10px;
+    padding: 10px;
+    padding-bottom: 60px; /* Ensure there's space for the input box */
+    color: white;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 0, 0, 0.4) rgba(255, 255, 255, 0.5); /* For Firefox */
 }
+
 .message-header {
-  color: white;
+    color: white;
 }
+
 .username {
-  font-weight: bold;
+    font-weight: bold;
 }
+
 .message {
-  list-style: none;
-  margin-bottom: 10px;
+    list-style: none;
+    margin-bottom: 10px;
 }
+
 .message-body {
-  background-color: rgba(55, 151, 240, 0.5);
-  max-width: 90%;
-  padding: 5px 15px;
-  display: flex;
-  align-items: center;
-  border-radius: 20px;
-  border-top-left-radius: 0;
-  word-wrap: break-word; /* Ensures words are broken to fit within the container */
-  overflow-wrap: break-word; /* Ensures text is broken to fit within the container */
-  display: inline-block; /* Ensures the container can grow vertically */
+    background-color: rgba(55, 151, 240, 0.5);
+    max-width: 90%;
+    padding: 5px 15px;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    word-wrap: break-word; /* Ensures words are broken to fit within the container */
+    overflow-wrap: break-word; /* Ensures text is broken to fit within the container */
+    display: inline-block; /* Ensures the container can grow vertically */
 }
 
 .message-body p {
-  margin: 0;
-  color: white;
+    margin: 0;
+    color: white;
 }
+
 .message-form {
-  width: 100%;
-  margin: 0 0 5px 0;
-  display: flex;
-}
-#message-input {
-  width: 80%;
-  border-radius: 15px;
-  border: none;
-  padding: 0 10px;
-}
-.message-form button {
-  width: 20%;
-  border: none;
-  border-radius: 15px;
-  background: #007bff;
-  color: white;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-.message-form button:hover {
-  background: #0056b3;
-}
-@media (max-width: 600px) {
-  .chat-container {
+    display: flex;
+    position: fixed; /* Fix the form at the bottom */
+    bottom: 0;
+    left: 0;
     width: 100%;
-    max-height: 93vh;
-  }
-  .chat-box {
-    max-width: 100vh;
-  }
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    box-sizing: border-box;
+    border-top: 1px solid #fffefe;
+}
+
+#message-input {
+    flex: 1;
+    border-radius: 15px;
+    border: none;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+.message-form button {
+    border: none;
+    border-radius: 15px;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+.message-form button:hover {
+    background: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .chat-container {
+        width: 100%;
+        height: 100vh;
+        max-height: none; /* Remove max-height to use full viewport height */
+    }
+    
+    .chat-box {
+        padding-bottom: 60px; /* Adjust padding for mobile to ensure space for the input box */
+    }
+
+    #message-input {
+        font-size: 14px;
+    }
+
+    .message-form button {
+        font-size: 14px;
+    }
+    .timestamp{
+      visibility: hidden;
+    }
 }
